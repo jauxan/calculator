@@ -1,13 +1,12 @@
-package com.jauxan.calculator;
+package com.victorponz.calculator;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+public class CalculatorApplicationTest {
+     private Calculator calculator = new Calculator();
 
-@SpringBootApplication
-public class CalculatorApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(CalculatorApplication.class, args);
-	}
-
+     @Test
+     public void testSum() {
+          assertEquals(5, calculator.sum(2, 3));
+     }
 }
